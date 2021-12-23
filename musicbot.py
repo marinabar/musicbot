@@ -2,7 +2,7 @@ import pandas as pd
 import telebot
 import os
 
-token = "5048192501:AAFFzzqB-_VD9UZWhJ5Ip7QPAgRds1S3XVw"
+token = ""
 bot = telebot.TeleBot(token=token)
 @bot.message_handler(commands=['start'])
 def start(message):
