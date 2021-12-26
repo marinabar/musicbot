@@ -2,7 +2,7 @@ import pandas as pd
 import telebot
 import os
 
-token = ""
+token = str(input("Please paste your token"))
 bot = telebot.TeleBot(token=token)
 @bot.message_handler(commands=['start'])
 def start(message):
