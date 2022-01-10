@@ -2,6 +2,7 @@ import pandas as pd
 import telebot
 import os
 
+folder = str(input("specify the desired folder"))
 token = str(input("Please paste your token"))
 bot = telebot.TeleBot(token=token)
 @bot.message_handler(commands=['start'])
@@ -15,7 +16,6 @@ def start(message):
 def all(message):
     text = message.text
     user_id = message.chat.id
-    folder = '/home/marina/Documents/spotscrape/coll'
     songs = os.listdir(folder)
     for element in songs:
         name = os.path.join(folder, element)
